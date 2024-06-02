@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shroud School</title>
+    <style>
+        #div1 {
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            margin-bottom: 55px;
+            
+        }
+        #p1{
+
+            font-style: italic;
+            font-family: Georgia ;
+            font-weight: bolder;
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            margin-top: 0px;
+        }
+        .avatar {
+            width: 150px;
+            height: auto;
+        }
+
+        .form1{
+            display: flex;
+            justify-content: center;
+           
+            
+        }
+        .div{
+
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 50px;
+        }
+        .submit{
+
+            cursor: pointer;
+        }
+
+        .radio{
+
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            
+        }
+        
+    </style>
+</head>
+<body  >
+    <div id="div1" >
+        <p id="p1">Welcome To Shroud institute of technology</p>
+    </div>
+<div class="div">
+
+   
+    <div class="imgcontainer">
+        <img src="static\images\profile.gif" alt="Avatar" class="avatar" width="50px" height="20px">
+        
+    </div>
+
+
+    <div class="form1">
+       
+        <form action="/server_form" autocomplete="off" method="POST">
+
+        <div class="radio">
+            <input type="radio" name="su" value="Staff" required> <label for="su">Staff</label>
+            <input type="radio" name="su" value="Student" required><br> <label for="su">Student</label>
+        </div>
+            <label for="unsername" style=" font-weight: bolder;">Username</label> <br>
+            <input type="text" id="unsername" name="unsername" style="border: 1px solid lightgrey;padding: 6px;margin-bottom: 5px;" placeholder="Username" required>
+            <br>
+
+            <label for="password" style="font-weight: bolder;">Password</label><br>
+            <input type="password" id="password" name="password" style="border: 1px solid lightgrey;padding: 6px;margin-bottom: 5px;" placeholder="Password" required>
+            <br>
+
+            <input type="submit" value="Login" class="submit" style="border: 1px solid MediumSeaGreen;background-color:MediumSeaGreen; padding: 5px;">
+
+            <a href="/sign_up_html" style="border: 1px solid lightskyblue;text-decoration: none;color: black;padding: 3px;padding-bottom: 5px;margin-left: 67px;background-color: lightskyblue;">Sign Up</a>
+
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

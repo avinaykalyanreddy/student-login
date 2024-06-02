@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shroud School</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+            height: 100vh;           
+            margin: 0;               
+        }
+
+        .div1 {
+       
+            background-color: powderblue;
+            color: white;           
+            padding: 20px;           
+            border-radius: 10px; 
+            width: 50vw;
+            height: 60vh;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.752); 
+
+            
+           
+        }
+       
+        .p1,label {
+            
+            font-weight: bolder;
+            color: #222;
+        }
+
+        @media screen and (max-width: 600px){
+         
+                  .div1{
+
+                    width: 100%;
+                    height: 70%;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                  }
+        }
+
+    </style>
+</head>
+<body >
+
+
+
+    <div class="div1">
+
+        <img src="static\images\user.png" alt="" style="width: 120px;height: 80px;"> 
+        <p class="p1" style="margin-top: 9vh;">Name: {{staff["name"]}}</p>
+        <p class="p1">Gender: {{staff["gender"]}}</p>
+        <p class="p1">Role: {{staff["role"]}}</p>
+        <p class="p1">Subject: {{staff["subject"]}}</p>
+
+        <form action="/students" method="POST" autocomplete="off">
+
+            <label for="select">View students information of </label>
+
+            <select name="select" id="select" name="branch">
+
+
+                <option value="ISE-1">ISE-1</option>
+                <option value="ISE-2">ISE-2</option>
+                <option value="ISE-3">ISE-3</option>
+            </select>
+
+            <input type="submit" style="background-color: MediumSeaGreen;border: 0px; cursor: pointer;" >
+        </form>
+    </div>
+</body>
+</html>

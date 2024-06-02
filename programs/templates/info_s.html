@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shroud School</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+            height: 100vh;           
+            margin: 0;               
+        }
+
+        .div1 {
+       
+            background-color: powderblue;
+            color: white;           
+            padding: 20px;           
+            border-radius: 10px; 
+            width: 50vw;
+            height: 80vh;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.752); 
+
+            
+           
+        }
+       
+        .p1,label {
+            
+            font-weight: bolder;
+            color: #222;
+        }
+
+        @media screen and (max-width: 600px){
+         
+                  .div1{
+
+                    width: 100%;
+                    height: 80vh;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                  }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+
+        <img src="static\images\user.png" alt="" style="width: 120px;height: 80px;"> 
+        <p class="p1" style="margin-top: 9vh;">Name: {{student["name"]}}</p>
+        <p class="p1">Branch: {{student["branch"]}}</p>
+        <p class="p1">section: {{student["section"]}}</p>
+        <p class="p1">usn: {{student["usn"]}}</p>
+        <p class="p1">phno: {{student["phno"]}}</p>
+        <p class="p1">sem: {{student["sem"]}}</p>
+        
+       
+        <p class="p1">email: {{student["email"]}}</p>
+
+     
+    </div>
+</body>
+</html>

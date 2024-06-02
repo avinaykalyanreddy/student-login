@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shroud School</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(90deg, lightskyblue 0%, powderblue 99%, #d2c7ca 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 1s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .div1 {
+            background-color: powderblue;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50vw;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+            font-weight: bolder;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        label, input, select {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <form action="/sign_up" method="POST" autocomplete="off">
+
+            <div class="radio-group">
+                <input type="radio" name="su" value="Staff" required disabled> <label for="su" >Staff</label>
+                <input type="radio" name="su" value="Student" required><br> <label for="su">Student</label>
+            </div>
+
+            <div class="form-group">
+                <label for="name">User_Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="usn">USN</label>
+                <input type="text" id="usn" name="usn" maxlength="10" minlength="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phno">Phno</label>
+                <input type="text" id="phno" name="phno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <input type="text" id="branch" name="branch" required>
+            </div>
+
+            <div class="form-group">
+                <label for="section">Section</label>
+                <select id="section" name="section" required>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sem">Sem</label>
+                <select id="sem" name="sem" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+
+</html>
